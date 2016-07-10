@@ -1,0 +1,24 @@
+;;; .cookie  -*- mode: emacs-lisp; coding: iso-2022-7bit -*-
+;; This file is generated automatically by emacs-w3m vnil.
+
+(["https://cn.bing.com/" "cn.bing.com" nil "httponly" nil "/" 0 "Sun, 29-Apr-2018 11:41:53 GMT" nil]
+["https://cn.bing.com/" "cn.bing.com" nil "MUIDB" "194508093937660D384D010F38966720" "/" 0 "Sun, 29-Apr-2018 11:41:53 GMT" nil]
+["https://cn.bing.com/" ".bing.com" nil "SRCHUSR" "DOB=20160429" "/" 0 "Sun, 29-Apr-2018 11:41:53 GMT" nil]
+["https://cn.bing.com/" "cn.bing.com" nil "SRCHUID" "V=2&GUID=9DB2A1B8F60E419B9E9026A0D64FA56B" "/" 0 "Sun, 29-Apr-2018 11:41:53 GMT" nil]
+["https://cn.bing.com/" ".bing.com" nil "SRCHD" "AF=NOFORM" "/" 0 "Sun, 29-Apr-2018 11:41:53 GMT" nil]
+["http://www.google.com.hk/search?inlang=zh-CN&newwindow=1&safe=strict&hl=zh-CN&gbv=1&ie=UTF-8&q=flowers+pictures&revid=529088833&sa=X&ved=0ahUKEwiVhZnk5Y_MAhUFEpQKHUqtAUwQ1QIIaSgG" ".google.com.hk" nil "HttpOnly" nil "/" 0 "Sat, 15-Oct-2016 04:23:29 GMT" nil]
+["http://www.google.com.hk/search?inlang=zh-CN&newwindow=1&safe=strict&hl=zh-CN&gbv=1&ie=UTF-8&q=flowers+pictures&revid=529088833&sa=X&ved=0ahUKEwiVhZnk5Y_MAhUFEpQKHUqtAUwQ1QIIaSgG" ".google.com.hk" nil "NID" "78=pES1mGn0c_qVSvJ0YXMfWt3l2ZrArlaxkwXh8uVuaHkpnwBsxr9E7xhNYYZaTCpGZ8AZ0sOA3decJd65evYRa2OTAk-Z3CscELCuVVriSMKUbXZZmlRYBjTYfNsXxxBCm3AVCrL_mob9pUw_97xSb-Jbyjg6RYRFSvNN3Gtp2TpapE1Iea-U1VGJaeHHf3r8jYOp8jUC" "/" 0 "Sat, 15-Oct-2016 04:23:29 GMT" nil]
+["https://accounts.google.com/ServiceLogin?hl=zh-CN&passive=true&continue=http://www.google.com.hk/webhp%3Fhl%3Dzh-CN%26tab%3Diw" "accounts.google.com" t "Priority" "HIGH" "/" 0 "Sun, 15-Apr-2018 04:16:50 GMT" nil]
+["https://accounts.google.com/ServiceLogin?hl=zh-CN&passive=true&continue=http://www.google.com.hk/webhp%3Fhl%3Dzh-CN%26tab%3Diw" "accounts.google.com" t "HttpOnly" nil "/" 0 "Sun, 15-Apr-2018 04:16:50 GMT" nil]
+["https://accounts.google.com/ServiceLogin?hl=zh-CN&passive=true&continue=http://www.google.com.hk/webhp%3Fhl%3Dzh-CN%26tab%3Diw" "accounts.google.com" t "GAPS" "1:GcXaD6NLV6JJO-fT_Zv1E6Q-NT8N6Q:90vDoVuKV1MgkV-G" "/" 0 "Sun, 15-Apr-2018 04:16:50 GMT" nil]
+["http://www.baidu.com/" ".baidu.com" nil "BAIDUID" "B1631EA0D2BB6EED6D705353CBB40553:FG=1" "/" 0 "Thu, 31-Dec-37 23:55:55 GMT" nil]
+["http://www.baidu.com/" ".baidu.com" nil "BIDUPSID" "B1631EA0D2BB6EED6D705353CBB40553" "/" 0 "Thu, 31-Dec-37 23:55:55 GMT" nil]
+["http://www.baidu.com/" ".baidu.com" nil "PSTM" "1460687670" "/" 0 "Thu, 31-Dec-37 23:55:55 GMT" nil]
+["http://www.baidu.com/" ".baidu.com" nil "max-age" "2147483647" "/" 0 "Thu, 31-Dec-37 23:55:55 GMT" nil]
+["http://www.baidu.com/s?wd=%E6%9D%A8%E5%8F%8C%E8%8E%89&oq=%E6%9D%A8%E5%8F%8C%E8%8E%89&ie=utf-8&rsv_idx=1&rsv_pq=991c0b74000831aa&rsv_t=fd3ctn0zSErQCiMl20bEgN54%2BD8bWW7qYu%2FNKVqECmmn6KbE2mvC%2B6Vxz%2F0&nojs=1&bqid=991c0b74000831aa" "www.baidu.com" nil "NOJS" "1" "/" 0 "Sun, 08-Apr-2046 02:35:10 GMT" nil]
+["http://blog.sina.com.cn/s/blog_94cda5340100wj69.html" ".sina.com.cn" nil "U_TRS1" "00000096.bdb54d12.57105379.fbbcdc44" "/" 0 "Mon, 13-Apr-26 02:35:37 GMT" nil]
+["http://stackoverflow.com/questions/15202577/emacs-symbols-value-as-variable-" ".stackoverflow.com" nil "__cfduid" "dcee28ca7c58f0d81d810ecbd5a4cb56f1460688264" "/" 0 "Sat, 15-Apr-17 02:44:24 GMT" nil]
+["http://stackoverflow.com/questions/15202577/emacs-symbols-value-as-variable-" ".stackoverflow.com" nil "prov" "bf6738a0-d286-4573-9e1f-c8a6998d5d64" "/" 0 "Fri, 01-Jan-2055 00:00:00 GMT" nil]
+["http://stackoverflow.com/questions/15202577/emacs-symbols-value-as-variable-" ".stackoverflow.com" nil "HttpOnly" nil "/" 0 "Fri, 01-Jan-2055 00:00:00 GMT" nil]
+["http://dict.cnki.net/dict_result.aspx?searchword=interplanar" "dict.cnki.net" nil "hw" "wordList=interplanar" "/" 0 "Tue, 22-Sep-2043 12:29:14 GMT" nil]
+["http://weather.yahoo.co.jp/weather/jp/26/6100.html" ".yahoo.co.jp" nil "B" "e5hhlgtbiqncm&b=3&s=gm" "/" 0 "Tue, 08-May-2018 03:14:30 GMT" nil])
