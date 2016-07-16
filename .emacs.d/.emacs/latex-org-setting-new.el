@@ -20,26 +20,25 @@
 (setq org-latex-classes
       '(("article"
 	 "
-\\documentclass{article}
-\\usepackage[
-a4paper,
-headheight=12pt,
-paperwidth=210mm,
-headsep=20pt,
-includeheadfoot,
-centering,
-top=2.5cm,
-bottom=1cm,
-left=3cm
-]{geometry}
+\\documentclass[12pt,a4paper]{article}
+\\setlength{\\textwidth}{360pt}
+\\setlength{\\textheight}{600pt}
+\\usepackage[top=1.5cm,bottom=0.6in,left=1in,right=1in]{geometry}
+\\usepackage{listings}
+\\usepackage{xcolor}
+\\usepackage{fancyhdr}
+%\\title{}
+%\\fancyfoot[C]{\\bfseries\\thepage}
+%\\chead{\\MakeUppercase\\sectionmark}
+%\\pagestyle{fancy}
 \\usepackage{xeCJK}  %
 \\usepackage{fontspec,xunicode,xltxtra}
 \\setmainfont{Times New Roman}
 \\setsansfont{Times New Roman}
 \\setmonofont{Times}                                                     
-%\\newcommand\\fontnamemono{STXihei}
-\\newfontinstance\\MONO{\\fontnamemono}                                        
-\\newcommand{\\mono}[1]{{\\MONO #1}}
+%\\newcommand\\fontnamemono{Times}
+%\\newfontinstance{\\MONO}{\\fontnamemono}                                        
+%\\newcommand{\\mono}[1]{{\\MONO #1}}
 \\setCJKmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{STSong}%中文字体
 \\setCJKsansfont{STHeiti}
 \\setCJKmonofont{STFangsong} 
@@ -49,16 +48,19 @@ left=3cm
 \\newcommand\\fontnamekai{STKaiti}
 \\newcommand\\fontnamefangsong{STFangsong}
 \\newcommand\\fontnamehuahei{STHeiti}
+\\newcommand\\fontnamemono{Times New Roman}
 \\setCJKfamilyfont{kai}{\\fontnamekai}
 \\setCJKfamilyfont{hei}{\\fontnamehei}
 \\setCJKfamilyfont{song}{\\fontnamesong}
 \\setCJKfamilyfont{fs}{\\fontnamefangsong}
 \\setCJKfamilyfont{huahei}{\\fontnamehuahei}
+\\setCJKfamilyfont{mono}{\\fontnamemono}
 \\newcommand{\\song}{\\CJKfamily{song}}    % 宋体
 \\newcommand{\\fs}{\\CJKfamily{fs}}             % 仿宋体
 \\newcommand{\\kai}{\\CJKfamily{kai}}          % 楷体
 \\newcommand{\\hei}{\\CJKfamily{hei}}         % 黑体
 \\newcommand{\\hhei}{\\CJKfamily{huahei}}       %娃娃体
+\\newcommand{\\mono}{\\CJKfamily{mono}}
 %设置字号快捷命令
 \\newcommand{\\yihao}{\\fontsize{26pt}{36pt}\\selectfont}           % 一号, 1.4 倍行距
 \\newcommand{\\erhao}{\\fontsize{22pt}{28pt}\\selectfont}          % 二号, 1.25倍行距
@@ -70,6 +72,21 @@ left=3cm
 \\newcommand{\\xiaosi}{\\fontsize{12pt}{18pt}\\selectfont}            % 小四, 1.5倍行距
 \\newcommand{\\dawuhao}{\\fontsize{11pt}{11pt}\\selectfont}       % 大五号, 单倍行距
 \\newcommand{\\wuhao}{\\fontsize{10.5pt}{15.75pt}\\selectfont}    % 五号, 单倍行距
+
+%设置颜色指令
+\\definecolor{foreground}{RGB}{220,220,204}
+\\definecolor{background}{RGB}{62,62,62}
+\\definecolor{preprocess}{RGB}{250,187,249}
+\\definecolor{var}{RGB}{239,224,174}
+\\definecolor{string}{RGB}{154,150,230}
+\\definecolor{type}{RGB}{225,225,116}
+\\definecolor{function}{RGB}{140,206,211}
+\\definecolor{keyword}{RGB}{239,224,174}
+\\definecolor{comment}{RGB}{180,98,4}
+\\definecolor{doc}{RGB}{175,215,175}
+\\definecolor{comdil}{RGB}{111,128,111}
+\\definecolor{constant}{RGB}{220,162,170}
+\\definecolor{buildin}{RGB}{127,159,127}
 
 \\usepackage{etoolbox}  % Quote 部份的字型設定
 \\newfontfamily\\quotefont{Songti SC}
@@ -100,6 +117,38 @@ left=3cm
 
 \\usepackage[below]{placeins}
 \\usepackage{flafter}
+
+%Options for \lset command（reference to listing Manual)
+\\newcommand{\\lstsetn}{\\lstset{
+ basicstyle=\color{foreground}\small\mono,           % 源代码字体样式
+  keywordstyle=\color{function}\bfseries\small\mono, % 关键词字体样式
+  identifierstyle=\color{doc}\small\monno,
+  commentstyle=\color{comment}\small\itshape,        %批注样式
+   escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+  morekeywords={*,...}               % if you want to add more keywords to the set
+  stringstyle=\color{string}\small,            %字符串样式
+  showstringspaces=false,                               %字符串空格显示
+  numbers=left,                                         %行号显示
+  numberstyle=\color{preprocess},                      %行号样式
+  stepnumber=1,                                         %行号递增
+  numbersep=5pt,
+  backgroundcolor=\color{background},                   % 代码框背景色
+  tabsize=4,                                             % TAB等效空格数
+  captionpos=t,                                          % 标题位置 top or buttom(t|b)
+  breaklines=true,                                       % 自动断行
+  breakatwhitespace=false,                                % 只在空格分行
+  showspaces=false,                                      % 显示空格 
+  columns=flexible,                                      % 列样式
+  %title=\lstname,
+  frame=single,                                          % 代码框：阴影盒
+  frameround=tttt,                                       % 代码框： 圆角
+  framesep=0pt,
+  framerule=8pt,
+  rulecolor=\color{background},
+  fillcolor=\color{white},
+  rulesepcolor=\color{comdil},
+  framexleftmargin=4.5mm
+  }}
 
 % [FIXME] ox-latex 的設計不良導致 hypersetup 必須在這裡插入
 \\usepackage{hyperref}
@@ -161,6 +210,10 @@ left=3cm
                       ("\\.x?html?\\'" . default)
                       ("\\.pdf\\'" . default)
                       ("\\.jpg\\'" . default)))
+
+;; 使用Listings宏包格式化源代码(只是把代码框用listing环境框起来，还需要额外的设置)
+(setq org-export-latex-listings t)
+
 ;; 各种Babel语言支持
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -177,66 +230,6 @@ left=3cm
    (latex . t)
    (js . t)
       ))        
-
-;; 导出Beamer的设置
-;; allow for export=>beamer by placing #+LaTeX_CLASS: beamer in org files
-;;-----------------------------------------------------------------------------
-(add-to-list 'org-latex-classes
-	     ;; beamer class, for presentations
-	     '("beamer"
-	       "
-\\documentclass[slidestop,compress,mathserif]{beamer}
-\\mode
-%beamer主题选择，在每个section之前加入这个section的目录，封面页去掉页眉和页脚
-\\usetheme{{{Antibes}}}%Beamer主题样式
-\\usecolortheme{lily}%Beamer颜色主题样式
-\\AtBeginSection{\\begin{frame}{Outline} 
-\\tableofcontents[currentsection]
-\\end{frame}}
-\\setbeamertemplate{navigation symbols}{}
-%\\renewcommand\\maketitle{\\frame[plain]{titlepage}}
-
-\\beamertemplateballitem
-\\setbeameroption{show notes}
-\\usepackage{graphicx}
-\\usepackage{tikz}
-\\usepackage{xcolor}
-\\usepackage{xeCJK}
-\\usepackage{amsmath}
-\\usepackage{lmodern}
-\\usepackage{polyglossia}
-%设置字体。
-\\usepackage{fontspec,xunicode,xltxtra}
-\\documentclass[UTF8]{ctexart} % 采用Mac字体                                  
-\\setmainfont{Times New Roman}
-\\setsansfont{Times New Roman}      
-\\setmonofont{Times}                                                     
-\\setCJKmainfont[BoldFont=STHeiti, ItalicFont=STKaiti]{STSong}%中文字体        
-\\setCJKsansfont{STHeiti}                                                      
-\\setCJKmonofont{STFangsong}
-%参考文献
-\\usepackage[backend = biber,natbib=true,style=science,sorting=none]{biblatex}
-\\addbibresource{Pharmaron.bib}
-\\AtBeginBibliography{\\footnotesize}
-\\setbeamertemplate{bibliography item}[text]
-%取消断词overpic包
-\\usepackage[none]{hyphenat}
-\\usepackage[abs]{overpic} 
-
-\\usepackage{verbatim}
-\\usepackage{listings}
-\\institute{{{{beamerinstitute}}}}
-\\subject{{{{beamersubject}}}}"
-			      ("\\section{%s}" . "\\section*{%s}")
-			      ("\\begin{frame}[fragile]\\frametitle{%s}"
-			       "\\end{frame}"
-			       "\\begin{frame}[fragile]\\frametitle{%s}"
-			       "\\end{frame}")))
-
-(setq ps-paper-type 'a4
-      ps-font-size 16.0
-      ps-print-header nil
-      ps-landscape-mode nil)
 
 
 (provide 'latex-org-setting-new)
